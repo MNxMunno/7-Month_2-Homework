@@ -1,11 +1,15 @@
-import React from 'react'
+import React from "react";
+import { useDispatch } from "react-redux";
+import { res } from "../../context/conterSlice";
 
-const Reset = () => {
+const Inc = () => {
+  const dispatc = useDispatch();
+
   return (
-    <div>
-      <button>Reset</button>
+    <div className="btn">
+      <button onClick={() => dispatc(res())}>Reset</button>
     </div>
-  )
-}
+  );
+};
 
-export default Reset
+export default Inc;

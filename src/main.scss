@@ -1,4 +1,8 @@
 .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   .cards {
     display: flex;
     align-items: baseline;
@@ -13,6 +17,7 @@ h2 {
 
 button {
   cursor: pointer;
+  border: 0;
 }
 
 form {
@@ -24,5 +29,31 @@ form {
   input {
     outline: none;
     width: 100px;
+    padding: 10px;
+  }
+  .inc {
+    border-radius: 8px;
+    background: green;
+    color: #fff;
+    padding: 10px 15px;
+  }
+  .dec {
+    border-radius: 8px;
+    background: red;
+    color: #fff;
+    padding: 10px 15px;
+  }
+}
+
+.btn {
+  width: 120px;
+  margin: auto;
+  padding-left: 80px;
+  padding-top: 120px;
+  button {
+    background: #000;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 8px;
   }
 }

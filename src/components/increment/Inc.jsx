@@ -20,9 +20,12 @@ const Inc = () => {
           type="number"
           value={iValue}
           onChange={(e) => setIValue(e.target.value)}
+          placeholder="Create number"
         />
 
-        <button onClick={() => dispatc(inc(1))}>Increment</button>
+        <button className="inc" onClick={() => dispatc(inc(1))}>
+          Increment
+        </button>
       </form>
     </>
   );

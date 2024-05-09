@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { dec } from "../../context/conterSlice";
 
 const Inc = () => {
   const [iValue, setIValue] = useState("");
   const dispatc = useDispatch();
+  const count = useSelector((state) => state.counter.value);
 
   const handleClick = (e) => {
     e.preventDefault();
@@ -23,7 +24,11 @@ const Inc = () => {
           placeholder="Create number"
         />
 
-        <button className="dec" onClick={() => dispatc(dec(1))}>
+        <button
+          disabled={count <= 1}
+          className="dec"
+          onClick={() => dispatc(dec(1))}
+        >
           Decrement
         </button>
       </form>

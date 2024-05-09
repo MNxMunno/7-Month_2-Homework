@@ -45,6 +45,9 @@ form {
     background: red;
     color: #fff;
     padding: 10px 15px;
+    &:disabled {
+      opacity: 0.5;
+    }
   }
 }
 
